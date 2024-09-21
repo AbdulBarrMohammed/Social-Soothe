@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
       },
+      padding: {
+        '30px': '30px',
+      }
     },
   },
   plugins: [],

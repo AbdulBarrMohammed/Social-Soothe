@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 const Questions = () => {
     // use state to open social anxiety question drop down button
@@ -7,6 +8,8 @@ const Questions = () => {
   const [isDropdownFive, setIsDropdownFive] = useState(false);
   const [isDropdownSix, setIsDropdownSix] = useState(false);
   const [isDropdownSeven, setIsDropdownSeven] = useState(false);
+
+
 
     return (
         <div className='flex flex-col bg-white px-20 py-20 justify-center items-center w-full'>

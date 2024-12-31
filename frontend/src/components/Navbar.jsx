@@ -57,16 +57,13 @@ export function Navbar() {
                             }
 
                         })
-
                 }
-
 
             } catch(err) {
                 console.log(err)
             }
 
         }
-
     }
 
     useEffect(() => {

@@ -28,10 +28,10 @@ export function Awards() {
     const email = cookies.Email
 
     /**
-         * Set user background sounds
-         * @param event
-         * @return none
-         */
+      * Set user background sounds
+      * @param event
+      * @return none
+    */
     const setSounds = async () => {
         try {
 

@@ -93,7 +93,6 @@ export function Breathe() {
 
     const [key, setKey] = useState(0); // re-render the timer
 
-
     /**
          * Restarts timer when current round ends
          * @param none

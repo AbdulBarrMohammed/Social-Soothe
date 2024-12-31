@@ -85,8 +85,8 @@ export function Landing() {
             <div className='flex gap-20 items-center justify-center' data-aos="fade-up">
                 <img src={"../src/assets/mh8.png"} className='h-60' />
                 <div className='flex flex-col gap-3 w-1/3'>
-                  <h2 className='text-4xl'>Document your social interactions</h2>
-                  <p className='text-3xl'>Before any social event that you are anxious about write down about the event and question and challenge your negative thoughts</p>
+                  <h2 className='text-3xl'>Document your social interactions</h2>
+                  <p className='text-2xl'>Before any social event that you are anxious about write down about the event and question and challenge your negative thoughts</p>
                 </div>
             </div>
 
@@ -96,8 +96,8 @@ export function Landing() {
             <div className='flex gap-20 items-center justify-center'  data-aos="fade-up">
 
               <div className='flex flex-col gap-3 w-1/3'>
-                <h2 className='text-4xl'>Grow gradually</h2>
-                <p className='text-3xl'>Each completed social interaction will gradually grow your social tree with flowers.</p>
+                <h2 className='text-3xl'>Grow gradually</h2>
+                <p className='text-2xl'>Each completed social interaction will gradually grow your social tree with flowers.</p>
               </div>
               <img src={"../src/assets/mh1.png"} className='h-60' />
 
@@ -108,8 +108,8 @@ export function Landing() {
             <div className='flex gap-20 items-center justify-center' data-aos="fade-up">
               <img src={"../src/assets/mh7.png"} className='h-60' />
               <div className='flex flex-col gap-3 w-1/3'>
-                <h2 className='text-4xl'>Reward yourself</h2>
-                <p className='text-3xl'>Completing each social interaction rewards you with leafs where you can use to earn rewards and a flower that goes on your social tree</p>
+                <h2 className='text-3xl'>Reward yourself</h2>
+                <p className='text-2xl'>Completing each social interaction rewards you with leafs where you can use to earn rewards and a flower that goes on your social tree</p>
               </div>
             </div>
 

@@ -8,11 +8,9 @@ import { getUserCurrentColor } from "../data/dataFunctions";
 
 export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex }) {
     const [cookies, setCookie, removeCookie] = useCookies(null)
-    const authToken = cookies.AuthToken
     const email = cookies.Email
     const [currCoins, setCurrCoins] = useState(0);
     const [sounds, setSounds] = useState([]);
-    const [showConfetti, setShowConfetti] = useState(false);
 
     const [isPlaying, setIsPlaying] = useState(false);
     const playPic =  "../../src/assets/play.svg"
@@ -49,8 +47,6 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
 
             const resSounds = await fetch(`http://localhost:8000/sounds/${email}`)
             const dataSounds = await resSounds.json();
-
-
 
             setSounds(dataSounds)
         } catch(err) {
@@ -120,7 +116,6 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                     brought = true
 
                 }
-
             })
 
             //If item was not brought
@@ -154,9 +149,7 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                             body: JSON.stringify({email, name, src})
                             })
 
-
                             window.location.reload()
-
 
                         }
                         else {
@@ -172,7 +165,6 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                 }
 
             }
-
 
         }
 
@@ -196,7 +188,6 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                         <img src={'../src/assets/leaf-2.png'} className="h-5"/>
 
                     </div>
-                    {showConfetti && <ReactConfetti/>}
                     <button onClick={buyBtn} className="px-10 py-2 rounded-3xl hover:underline underline-offset-8 decoration-4 transition-all duration-300 ease-in-out" style={{ backgroundColor: buttonsColor}}>
                         Buy
                     </button>

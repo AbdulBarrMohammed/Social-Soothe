@@ -15,6 +15,7 @@ export function Affirmations () {
     const email = cookies.Email
 
     const [quote, setQuote] = useState("");
+
     useEffect(() => {
         const index = Math.floor(Math.random() * data.length-1) + 1;
         setQuote(data[index])

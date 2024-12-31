@@ -9,13 +9,10 @@ ChartJS.register(
 )
 
 export const PieChart = () => {
-    const options = {}
 
     const [journals, setJournals] = useState([])
 
-
     const [cookies, setCookie, removeCookie] = useCookies(null)
-    const authToken = cookies.AuthToken
     const userEmail = cookies.Email
 
     const pieData = [0,0,0,0,0,0]

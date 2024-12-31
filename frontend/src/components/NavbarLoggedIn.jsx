@@ -49,8 +49,7 @@ export function NavbarLoggedIn() {
     useEffect(() => {
         getData()
     },[])
-    //bg-[#F9F6F4]
-    //rgb(68,112,173)
+
     return (
         <>
         {authToken &&

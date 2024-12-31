@@ -12,7 +12,7 @@ export function LogIn() {
   const [password, setPassword] = useState("")
   const [loginError, setLoginError] = useState(false);
 
-    //navigation
+  //Navigation
   const navigate = useNavigate()
 
 
@@ -26,13 +26,16 @@ export function LogIn() {
 
     })
 
+    //Get user data
     const data = await response.json()
 
+    //Check if the user exists first
     if (data.detail == "User does not exist") {
       setLoginError(true);
       navigate("/login");
     }
     else {
+      //Set user cookies and authtoken
       navigate("/dashboard")
       setCookie('Email', data.email)
       setCookie('AuthToken', data.token)

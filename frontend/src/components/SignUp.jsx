@@ -8,6 +8,7 @@ export function SignUp() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [gender, setGender] = useState("")
+  const [error, setError] = useState(false)
 
   //navigation
   const navigate = useNavigate()
@@ -23,12 +24,19 @@ export function SignUp() {
     })
 
     const data = await response.json()
-    console.log(data)
 
-    setCookie('Email', data.email)
-    setCookie('AuthToken', data.token)
+    //First check if error authenticating user
+    if (data.dbError) {
+      setError(true)
+      console.log('error authenticating')
+    }
+    else {
 
-    navigate("/journals")
+      setCookie('Email', data.email)
+      setCookie('AuthToken', data.token)
+      navigate("/journals")
+
+    }
 
   }
 
@@ -48,7 +56,7 @@ export function SignUp() {
              name="password"
              type="password"
              placeholder="Password"
-             onChange={(e) => setPassword(e.target.value)} required maxLength={20} minLength={10}/>
+             onChange={(e) => setPassword(e.target.value)} required maxLength={20} minLength={8}/>
 
             <select className="p-2 rounded-sm" onChange={(e) => setGender(e.target.value)} name="gender" required>
                 <option value="">Select Gender</option>
@@ -61,7 +69,10 @@ export function SignUp() {
           </div>
 
           <div className='text-center'>
+
+            {error && <p className="font-bold text-red-600">Error email already exists</p>}
             <p>Have an account? <a className='font-bold cursor-pointer' onClick={() => navigate("/logIn")}>Log in</a></p>
+
           </div>
 
 

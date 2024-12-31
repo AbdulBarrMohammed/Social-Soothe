@@ -6,7 +6,6 @@ export function AwardNavbar() {
     const [lightestBg, setLightestBg] = useState("");
     const [buttonsColor, setButtonColor] = useState("")
     const [cookies, setCookie, removeCookie] = useCookies(null)
-    const authToken = cookies.AuthToken
     const email = cookies.Email
 
     const setBgColor = async () => {

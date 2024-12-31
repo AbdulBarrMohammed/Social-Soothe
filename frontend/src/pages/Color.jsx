@@ -6,7 +6,6 @@ import { getUserCurrentColor } from "../data/dataFunctions";
 
 export function Color({color}) {
     const [cookies, setCookie, removeCookie] = useCookies(null)
-    const authToken = cookies.AuthToken
     const email = cookies.Email
     const [currLeafs, setCurrLeafs] = useState(0);
     const [colors, setColors] = useState([]);
@@ -92,7 +91,6 @@ export function Color({color}) {
                     }
 
                 }
-
 
             }
 

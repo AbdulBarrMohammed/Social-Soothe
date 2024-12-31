@@ -35,7 +35,10 @@ async function signUpPost(req, res, next) {
               res.json({ email, token })
 
           } catch (dbError) {
-            return next(dbError);
+
+            return res.json({ dbError })
+            //return next(dbError);
+
           }
         });
       } catch (err) {

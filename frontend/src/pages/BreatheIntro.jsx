@@ -44,7 +44,7 @@ export function BreatheIntro() {
 
 
                     </div>
-                    <img src="../src/assets/balloons.svg" className="h-60 pt-10"/>
+                    <img src="../src/assets/mh6.png" className="h-80 pt-8"/>
                 </div>
 
             }

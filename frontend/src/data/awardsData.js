@@ -218,6 +218,3 @@ dark String
     },
 
 ];
-
-
-///Users/barrmohammed/Desktop/social_soothe/frontend/src/assets/sounds/heavy-rain-3.wav

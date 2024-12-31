@@ -44,7 +44,7 @@ export function Dashboard() {
 
             setFlowerCount(data.length);
             if (data.length >= 22 && data.length < 100) {
-                const newData = {img : '../../src/assets/green-tea.png', text: 'Social Sprouting Plant'}
+                const newData = {img : '../../src/assets/plant.png', text: 'Social Sprouting Plant'}
                 setSocialStanding(newData)
 
             }
@@ -188,17 +188,18 @@ export function Dashboard() {
                             <p className="text-2xl"> {leafCount} <span>Leafs Earned</span></p>
 
                         </div>
+
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor }}>
-                            <img className="h-14"src="../src/assets/camellia.png"/>
+                            <img className="h-14"src="../src/assets/cherry-blossom.png"/>
                             <p className="text-2xl"> {flowerCount} <span>Tree flowers</span></p>
 
                         </div>
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor }}>
-                            <img className="h-14"src="../src/assets/scrapbook.png"/>
+                            <img className="h-14"src="../src/assets/diary.png"/>
                             <p className="text-2xl"> {journalCount} <span>Journal Entries</span></p>
                         </div>
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor }}>
-                            <img className="h-14"src="../src/assets/gold-medal.png"/>
+                            <img className="h-14"src="../src/assets/badge.png"/>
                             <p className="text-2xl"> {awardCount} <span>Awards Earned</span></p>
                         </div>
                     </div>

@@ -23,7 +23,7 @@ export function AwardNavbar() {
                 setButtonColor("#4470AD")
             }
             else {
-                //check for current user color in users purchased colors to set chosen background color
+                //Check for current user color in users purchased colors to set chosen background color
                 dataColors.map((c) => {
                     if (c.name === dataColor.currColor) {
                         setLightestBg(c.lightest)

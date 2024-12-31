@@ -20,8 +20,8 @@ export function Landing() {
     <>
       {/* main section */}
       <div className="bg-[#F0F8FF] flex flex-col items-center text-[#44423F]">
-        <div className='bg-[#CCDBEE] flex gap-10  justify-center items-center px-20 py-40 w-full'>
-                <div className='w-2/4 flex gap-6 flex-col'>
+          <div className='bg-[#CCDBEE] flex gap-5  justify-center items-center px-20 py-40'>
+              <div className='flex gap-6 flex-col w-1/2'>
                 <h1 className='text-7xl font-semibold leading-[5rem] text-[#44423F]'>Helping You Navigate Social Anxiety.</h1>
                 <p className='text-3xl leading-[2.6rem] text-[#44423F]'>Social Soothe will help with your social anxiety
                     when no one else will.
@@ -31,11 +31,11 @@ export function Landing() {
                     <button className='bg-[#4470AD] text-white  p-5 rounded-full text-[18px] font-bold shadow-md hover:bg-[#5F8CC6] transition-all duration-300 ease-in-out' >Try it now</button>
                 </Link>
 
-                </div>
-            <div>
-              <img src={`../src/assets/walking_blue.svg`} className="h-96"  alt="Description" />
-            </div>
-        </div>
+              </div>
+              <div className='w-1/2'>
+                  <img src={`../src/assets/mh1.png`} className=""  alt="Description" />
+              </div>
+          </div>
 
         {/* Social Soothe horizontal description section */}
         <motion.div
@@ -45,9 +45,9 @@ export function Landing() {
         viewport={{once: false, amount: 0.5}}
         className='bg-[#F0F8FF] flex flex-wrap justify-center items-center px-20 py-28 gap-16 w-full'>
             <div className='flex flex-col gap-5 max-w-sm'>
-              <div className='flex  items-center gap-5'>
-                <img src={'../src/assets/undraw_smiley_face_re_9uid.svg'} className="h-28"/>
-                <h2 className='font-bold text-2xl'>Write down your emotions</h2>
+              <div className='flex items-center gap-1'>
+                <img src={'../src/assets/mh2.png'} className="h-40"/>
+                <h2 className='font-bold text-2xl'>Write your emotions</h2>
               </div>
               <p className='text-lg'>Write down and keep a journal of how your feeling each day when dealing with a social interaction, pick how it made you
               feel and explain why it made you feel that way
@@ -55,9 +55,9 @@ export function Landing() {
             </div>
 
             <div className='flex flex-col gap-5 max-w-sm' >
-              <div className='flex items-center gap-5'>
+              <div className='flex items-center gap-1'>
 
-                <img src={'../src/assets/undraw_mindfulness_8gqa.svg'} className="h-32"/>
+                <img src={'../src/assets/mh3.png'} className="h-40"/>
                 <h2 className='font-bold text-2xl'>Take some breathing exercises</h2>
               </div>
               <p className='text-lg'>Learn to take deep breathes when dealing with social anxiety with different breathing techniques for different situations that can help a person feel a sense of calm
@@ -65,11 +65,12 @@ export function Landing() {
             </div>
 
             <div className='flex flex-col gap-5 max-w-sm'>
-              <div className='flex items-center gap-5'>
-                <img src={'../src/assets/undraw_appreciate_it_re_yc8h.svg'} className="h-32"/>
+              <div className='flex items-center gap-1'>
+                <img src={'../src/assets/mh4.png'} className="h-40"/>
                 <h2 className='font-bold text-2xl'>Recieve daily affirmations</h2>
               </div>
-              <p className='text-lg'>Check in everyday to recieve as many daily affirmations as you want to give you confidence throughout the day </p>
+              <p className='text-lg'>Check in everyday to recieve as many daily positive affirmations as you want to help boost your social confidence and overall
+                mood throughout the day </p>
             </div>
         </motion.div>
 
@@ -81,32 +82,34 @@ export function Landing() {
           <h2 className='text-5xl text-center py-10 font-medium'>Grow your social tree</h2>
           <div className='flex flex-col gap-20 items-center justify-center'>
 
-            <div className='flex gap-20 items-center justify-center max-w-2xl' data-aos="fade-up">
-                <img src={"../src/assets/undraw_environment_iaus.svg"} className='w-1/3' />
-                <div className='flex flex-col gap-5'>
-                  <h2 className='text-3xl'>Document your social interactions</h2>
-                  <p className='text-2xl'>Before any social event that you are anxious about write down about the event and question and challenge your negative thoughts</p>
+            <div className='flex gap-20 items-center justify-center' data-aos="fade-up">
+                <img src={"../src/assets/mh8.png"} className='h-60' />
+                <div className='flex flex-col gap-3 w-1/3'>
+                  <h2 className='text-4xl'>Document your social interactions</h2>
+                  <p className='text-3xl'>Before any social event that you are anxious about write down about the event and question and challenge your negative thoughts</p>
                 </div>
             </div>
 
             <img src={'../src/assets/arrow-down.svg'} className='h-20'/>
 
 
-            <div className='flex gap-20 items-center justify-center max-w-2xl'  data-aos="fade-up">
-              <img src={"../src/assets/undraw_gardening_re_e658.svg"} className='h-24' />
-              <div className='flex flex-col gap-5'>
-                <h2 className='text-3xl'>Grow gradually</h2>
-                <p className='text-2xl'>Each completed social interaction will gradually grow your social tree with flowers.</p>
+            <div className='flex gap-20 items-center justify-center'  data-aos="fade-up">
+
+              <div className='flex flex-col gap-3 w-1/3'>
+                <h2 className='text-4xl'>Grow gradually</h2>
+                <p className='text-3xl'>Each completed social interaction will gradually grow your social tree with flowers.</p>
               </div>
+              <img src={"../src/assets/mh1.png"} className='h-60' />
+
             </div>
 
             <img src={'../src/assets/arrow-down.svg'} className='h-20'/>
 
-            <div className='flex gap-20 items-center justify-center max-w-2xl' data-aos="fade-up">
-              <img src={"../src/assets/undraw_blooming_re_2kc4-2.svg"} className='w-1/3' />
-              <div className='flex flex-col gap-5'>
-                <h2 className='text-3xl'>Reward yourself</h2>
-                <p className='text-2xl'>Completing each social interaction rewards you with five leafs where you can use to earn rewards.</p>
+            <div className='flex gap-20 items-center justify-center' data-aos="fade-up">
+              <img src={"../src/assets/mh7.png"} className='h-60' />
+              <div className='flex flex-col gap-3 w-1/3'>
+                <h2 className='text-4xl'>Reward yourself</h2>
+                <p className='text-3xl'>Completing each social interaction rewards you with leafs where you can use to earn rewards and a flower that goes on your social tree</p>
               </div>
             </div>
 
@@ -122,9 +125,6 @@ export function Landing() {
                 you immediate help.
               </p>
             </div>
-            <div>
-              <button className='bg-[#44423F] text-white p-5 rounded-full text-[18px] font-bold shadow-md hover:bg-[#6B6864] transition-all duration-300 ease-in-out'>Resources</button>
-            </div>
 
           </div>
 
@@ -139,7 +139,6 @@ export function Landing() {
             <p>&#169; Social Soothe</p>
             <Link to={`/about`}><p>About</p></Link>
             <Link to={'privacyPolicy'}><p>Privacy policy</p></Link>
-            <p>Terms & conditions</p>
 
           </div>
 

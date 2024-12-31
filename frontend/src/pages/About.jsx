@@ -13,9 +13,10 @@ export function About() {
 
 
     return (
-        <div className="bg-[#CCDBEE] flex flex-col text-[rgb(68,66,63)] h-screen pt-28">
-            <div className="flex flex-wrap gap-20 items-center justify-center pb-60 px-20">
-                <div className="w-3/5 flex flex-col gap-5">
+        <div className="bg-[#CCDBEE] flex flex-col text-[rgb(68,66,63)] h-screen">
+
+            <div className="flex flex-wrap gap-10 items-center justify-center px-20 py-32 bg-[#CCDBEE]">
+                <div className="flex flex-col gap-5 w-1/2">
                     <h2 className="text-2xl">About us</h2>
                     <h1 className="text-5xl font-bold">Helping those with social anxiety when no one else will</h1>
                     <p className="text-xl">Social Soothes mission to help those struggling with social anxiety better cope with it and offer a plat form
@@ -27,13 +28,13 @@ export function About() {
                     </div>
                 </div>
                 <div>
-                    <img src={"../src/assets/hiking.svg"} className="w-80"/>
+                    <img src={"../src/assets/mh9.png"} className="h-96"/>
                 </div>
             </div>
 
             <div className="bg-[#ACC8EA] w-screen px-40 pb-40 flex gap-20 py-20 items-center justify-center">
                 <div>
-                    <img src={"../src/assets/undraw_The_world_is_mine_re_j5cr.svg"} className="h-80"/>
+                    <img src={"../src/assets/mh10.png"} className="h-80"/>
                 </div>
                 <div className="flex flex-col gap-5 w-3/5">
                     <h1 className="text-5xl font-bold">Built to help you soothe and help you grow for everyone</h1>
@@ -54,9 +55,6 @@ export function About() {
                         you immediate help.
                     </p>
                     </div>
-                    <div>
-                    <button className='bg-[#44423F] text-white p-5 rounded-full text-[18px] font-bold shadow-md hover:bg-[#6B6864] transition-all duration-300 ease-in-out'>Resources</button>
-                    </div>
 
                 </div>
 
@@ -65,10 +63,9 @@ export function About() {
             <footer className='bg-[#44423F] flex justify-between items-center text-white w-full px-10 py-10'>
 
                 <div className='flex items-center gap-7'>
-                <p>&#169; Social Soothe</p>
-                <p>About</p>
-                <p>Privacy policy</p>
-                <p>Terms & conditions</p>
+                    <p>&#169; Social Soothe</p>
+                    <Link to={`/about`}><p>About</p></Link>
+                    <Link to={'privacyPolicy'}><p>Privacy policy</p></Link>
 
                 </div>
 

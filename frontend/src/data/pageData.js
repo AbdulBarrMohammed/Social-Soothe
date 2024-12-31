@@ -41,12 +41,12 @@ export const pageDataLeft = [
         path: "/about"
     },
     {
-        name: "Resources",
-        path: "/resources"
-    },
-    {
         name: "Home",
         path: "/"
+    },
+    {
+        name: "Privacy Policy",
+        path: "/privacyPolicy"
     },
 
 ]

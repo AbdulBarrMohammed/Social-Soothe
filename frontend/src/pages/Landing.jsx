@@ -5,14 +5,6 @@ import { fadeIn } from '../variants';
 import Questions from './Questions';
 
 
-//Hard parts
-// * Authenticating different users with passport and crypting their password with brycpt and using jwt tokens
-// * Storing data in prisma for postgrelSQL under each unique user
-// * had trouble playing background sounds when pressed and continuing playing the sound after it is unpaused
-// * Had trouble playing and pausing the breathing sounds for the breathing exercises
-// * Figuring out a way to create a virtual tree and placing the tree node leafs on random parts on the top of the tree bark
-// * keeping and up changing the background color for each user who decides to change their background
-// * Diffuculty figuring out how to make sure the user is authenticated to be able to use the site
 
 export function Landing() {
 

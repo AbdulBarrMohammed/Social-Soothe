@@ -28,7 +28,7 @@ export const pageDataLoggedIn = [
         img: "../src/assets/heart.svg"
     },
     {
-        name: "Awards",
+        name: "Prizes",
         path: "/awards/Sounds",
         img: "../src/assets/trophy-award.svg"
     },

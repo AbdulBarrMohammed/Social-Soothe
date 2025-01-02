@@ -5,6 +5,8 @@ import { useCookies } from "react-cookie";
 import { useEffect } from "react";
 import { LogIn } from "../components/Login";
 import { getUserCurrentColor } from "../data/dataFunctions";
+import mh3 from '../assets/mh3.png'
+
 export function BreatheIntro() {
 
     const [lightestBg, setLightestBg] = useState("#ACC8EA");
@@ -44,7 +46,7 @@ export function BreatheIntro() {
 
 
                     </div>
-                    <img src="../src/assets/mh6.png" className="h-80 pt-8"/>
+                    <img src={mh3} className="h-72 pt-2"/>
                 </div>
 
             }

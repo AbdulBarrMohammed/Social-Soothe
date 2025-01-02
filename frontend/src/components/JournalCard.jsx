@@ -2,6 +2,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Squircle } from "@squircle-js/react"
+import mad from "../assets/emojiMad.png"
+import sad from "../assets/emojiSad.png"
+import worry from "../assets/emojiWorry.png"
+import embarressed from "../assets/emojiEmbarressed.png"
+import stressed from "../assets/emojiStressed.png"
+import happy from "../assets/emojiHappy.png"
+
 
 
 export function JournalCard ({journal}) {
@@ -18,33 +25,33 @@ export function JournalCard ({journal}) {
     useEffect(() => {
         setCurrMood(journal.mood)
         if (journal.mood == 'angry') {
-            setEmoji("../src/assets/emojiMad.png")
+            setEmoji(mad)
             setBgColor("rgb(249, 230, 224)")
             setTextColor("rgb(209, 112, 83)");
         }
         else if (journal.mood == 'embarrassed') {
-            setEmoji("../src/assets/emojiEmbarressed.png")
+            setEmoji(embarressed)
             setBgColor("rgb(214, 249, 246)")
             setTextColor("rgb(87, 156, 149)");
 
         }
         else if (journal.mood == 'stressed') {
-            setEmoji("../src/assets/emojiStressed.png")
+            setEmoji(stressed)
             setBgColor("rgb(250, 225, 238)")
             setTextColor("rgb(205, 92, 146)");
         }
         else if (journal.mood == 'worried') {
-            setEmoji("../src/assets/emojiWorry.png")
+            setEmoji(worry)
             setBgColor("rgb(232, 218, 250)")
             setTextColor("rgb(123, 57, 196)");
         }
         else if (journal.mood == 'sad') {
-            setEmoji("../src/assets/emojiSad.png")
+            setEmoji(sad)
             setBgColor("rgb(233, 234, 253)")
             setTextColor("rgb(69, 74, 186)");
         }
         else {
-            setEmoji("../src/assets/emojiHappy.png")
+            setEmoji(happy)
             setBgColor("rgb(251, 235, 190)")
             setTextColor("rgb(195, 159, 60)");
         }

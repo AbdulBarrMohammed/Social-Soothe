@@ -1,6 +1,10 @@
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 
+
+import mh9 from '../assets/mh9.png'
+import mh10 from '../assets/mh10.png'
+
 export function About() {
 
     const navigate = useNavigate()
@@ -18,28 +22,26 @@ export function About() {
                 <div className="flex flex-col gap-5 w-1/2">
                     <h2 className="text-2xl">About us</h2>
                     <h1 className="text-5xl font-bold">Helping those with social anxiety when no one else will</h1>
-                    <p className="text-xl">Social Soothes mission to help those struggling with social anxiety better cope with it and offer a plat form
-                        for those people with social anxiety that are being unheard, there are not many mental health websites
-                        that specifically cater to those with social anxiety and that is fully free, but social soothe is hear to change that.
+                    <p className="text-xl">Social Soothe's mission is to help those struggling with social anxiety better cope and provide a platform for individuals who feel unheard.
+                        There are few mental health websites that specifically cater to those with social anxiety and are completely free, but Social Soothe is here to change that.
                     </p>
                     <div>
                         <button onClick={handleClick} className="bg-[#4470AD] rounded-full font-bold text-[18px] text-white shadow-md p-5">Sign up For free</button>
                     </div>
                 </div>
                 <div>
-                    <img src={"../src/assets/mh9.png"} className="h-96"/>
+                    <img src={mh9} className="h-96"/>
                 </div>
             </div>
 
             <div className="bg-[#ACC8EA] w-screen px-40 pb-40 flex gap-20 py-20 items-center justify-center">
                 <div>
-                    <img src={"../src/assets/mh10.png"} className="h-80"/>
+                    <img src={mh10} className="h-80"/>
                 </div>
                 <div className="flex flex-col gap-5 w-3/5">
                     <h1 className="text-5xl font-bold">Built to help you soothe and help you grow for everyone</h1>
-                    <p className="text-xl">Here in social soothe this platform can be used for anybody no matter the gender or race. No one
-                        should feel that they are alone or feel ashamed of having social anxiety or feed into the pressure of societies
-                        unfair social norms.
+                    <p className="text-xl">In Social Soothe, this platform is designed for everyone, regardless of gender, race or sexual orientation.
+                        No one should feel alone, ashamed of having social anxiety, or pressured to conform to society's unfair social norms.
                     </p>
                 </div>
 
@@ -59,22 +61,14 @@ export function About() {
 
             </footer>
 
-            <footer className='bg-[#44423F] flex justify-between items-center text-white w-full px-10 py-10'>
+            <footer className='bg-[#44423F] flex justify-center items-center text-white w-full px-10 py-10'>
 
                 <div className='flex items-center gap-7'>
                     <p>&#169; Social Soothe</p>
-                    <Link to={`/about`}><p>About</p></Link>
-                    <Link to={'privacyPolicy'}><p>Privacy policy</p></Link>
+                    <Link to={`/about`}><p className='hover:underline underline-offset-2'>About</p></Link>
+                    <Link to={'/privacyPolicy'}><p className='hover:underline underline-offset-2'>Privacy policy</p></Link>
 
                 </div>
-
-                <ul className='flex items-center gap-2'>
-                <li><img src={"../src/assets/icons8-instagram-48.png"} className='h-8'/></li>
-                <li><img src={"../src/assets/icons8-facebook-48.png"} className='h-8'/></li>
-                <li><img src={"../src/assets/icons8-youtube-48.png"} className='h-8'/></li>
-                <li><img src={"../src/assets/icons8-twitter.svg"} className='h-8'/></li>
-                <li><img src={"../src/assets/icons8-tiktok-48.png"} className='h-8'/></li>
-                </ul>
             </footer>
         </div>
     )

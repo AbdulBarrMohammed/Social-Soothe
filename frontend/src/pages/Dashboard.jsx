@@ -4,7 +4,20 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { getUserCurrentColor } from "../data/dataFunctions";
 import { LogIn } from "../components/Login";
+import seed from '../assets/seed.png'
+import plant from '../assets/plant.png'
+import rose from '../assets/rose.png'
 
+import morning from '../assets/sunrise.jpg'
+import afternoon from '../assets/landscape.jpg'
+import evening from '../assets/sunset.jpg'
+import night from '../assets/night.jpg'
+
+import leafNum from '../assets/leaf-2.png'
+import flowerNum from '../assets/cherry-blossom.png'
+import journalNum from '../assets/diary.png'
+import awardNum from '../assets/badge.png'
+import logo from '../assets/breeze.png'
 
 export function Dashboard() {
 
@@ -27,7 +40,7 @@ export function Dashboard() {
     const [fontColor, setFontColor] = useState("black");
 
     const [socialStanding, setSocialStanding] = useState({
-        img: '../../src/assets/icons8-seed-64.png',
+        img: seed,
         text: 'Seed'
     })
 
@@ -44,16 +57,16 @@ export function Dashboard() {
 
             setFlowerCount(data.length);
             if (data.length >= 22 && data.length < 100) {
-                const newData = {img : '../../src/assets/plant.png', text: 'Social Sprouting Plant'}
+                const newData = {img : plant , text: 'Social Sprouting Plant'}
                 setSocialStanding(newData)
 
             }
             else if (data.length >= 100) {
-                const newData = {img : '../../src/assets/rose.png', text: 'Social Sprout Flower'}
+                const newData = {img : rose, text: 'Social Sprout Flower'}
                 setSocialStanding(newData)
             }
             else {
-                const newData = {img : '../../src/assets/seeds.png', text: 'Social Seed'}
+                const newData = {img : seed, text: 'Social Seed'}
                 setSocialStanding(newData)
             }
 
@@ -121,30 +134,30 @@ export function Dashboard() {
 
         //Sunrise time
         if (time > "06:00" && time < "12:00" && time.includes("AM") ) {
-                setBgTime("url(../src/assets/sunrise.jpg)");
+                setBgTime(`url(${morning})`);
                 setTimeText("Good morning");
           }
 
         //Afternoon time
         else if ( time >= "01:00" && time < "05:00" && time.includes("PM") ) {
-            setBgTime("url(../src/assets/landscape.jpg)");
+            setBgTime(`url(${afternoon})`);
             setTimeText("Good afternoon");
         }
 
         else if (time >= "12:00" && time < "12:59" && time.includes("PM")) {
-            setBgTime("url(../src/assets/landscape.jpg)");
+            setBgTime(`url(${afternoon})`);
             setTimeText("Good afternoon");
         }
 
         //Evening time
         else if (time > "05:00" && time < "11:00" && time.includes("PM")) {
-            setBgTime("url(../src/assets/sunset.jpg)");
+            setBgTime(`url(${evening})`);
             setTimeText("Good evening");
           }
 
         //Night time
         else {
-            setBgTime("url(../src/assets/night.jpg)");
+            setBgTime(`url(${night})`);
             setTimeText("Good night");
             setFontColor("white")
           }
@@ -169,7 +182,7 @@ export function Dashboard() {
 
                 <div className="flex justify-start items-center gap-5">
                     <div>
-                        <img src={"../src/assets/breeze.png"} className="h-20"/>
+                        <img src={logo} className="h-20"/>
                     </div>
                     <div className="flex flex-col text-[#44423F]">
                         <h1 className="text-3xl">Welcome back <span className="font-bold">{userEmail}</span></h1>
@@ -184,22 +197,22 @@ export function Dashboard() {
                     </div>
                     <div className="grid gap-4 grid-cols-2 grid-rows-2">
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor}}>
-                            <img className="h-14"src="../src/assets/leaf-2.png"/>
+                            <img className="h-14"src={leafNum}/>
                             <p className="text-2xl"> {leafCount} <span>Leafs Earned</span></p>
 
                         </div>
 
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor }}>
-                            <img className="h-14"src="../src/assets/cherry-blossom.png"/>
+                            <img className="h-14"src={flowerNum}/>
                             <p className="text-2xl"> {flowerCount} <span>Tree flowers</span></p>
 
                         </div>
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor }}>
-                            <img className="h-14"src="../src/assets/diary.png"/>
+                            <img className="h-14"src={journalNum}/>
                             <p className="text-2xl"> {journalCount} <span>Journal Entries</span></p>
                         </div>
                         <div className="flex flex-col gap-2 items-start justify-center rounded-3xl pl-5 text-white" style={{ backgroundColor: buttonsColor }}>
-                            <img className="h-14"src="../src/assets/badge.png"/>
+                            <img className="h-14"src={awardNum}/>
                             <p className="text-2xl"> {awardCount} <span>Awards Earned</span></p>
                         </div>
                     </div>

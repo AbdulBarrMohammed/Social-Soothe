@@ -4,7 +4,10 @@ import { useEffect } from "react";
 import { useCookies } from "react-cookie";
 import ReactConfetti from 'react-confetti';
 import { getUserCurrentColor } from "../data/dataFunctions";
+import playImg from '../assets/play.svg'
+import pauseImg from '../assets/pause.svg'
 
+import leafImg from '../assets/leaf-2.png'
 
 export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex }) {
     const [cookies, setCookie, removeCookie] = useCookies(null)
@@ -13,8 +16,8 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
     const [sounds, setSounds] = useState([]);
 
     const [isPlaying, setIsPlaying] = useState(false);
-    const playPic =  "../../src/assets/play.svg"
-    const pausePic = "../../src/assets/pause.svg"
+    const playPic = playImg
+    const pausePic = pauseImg
 
 
     const audioRef = useRef(null);
@@ -185,7 +188,7 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                 <div className="flex gap-4 items-center">
                     <div className="flex items-cente gap-2">
                         <p>{audioSrc.price}</p>
-                        <img src={'../src/assets/leaf-2.png'} className="h-5"/>
+                        <img src={leafImg} className="h-5"/>
 
                     </div>
                     <button onClick={buyBtn} className="px-10 py-2 rounded-3xl hover:underline underline-offset-8 decoration-4 transition-all duration-300 ease-in-out" style={{ backgroundColor: buttonsColor}}>

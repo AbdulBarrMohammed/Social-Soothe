@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import {motion} from 'framer-motion';
 import { fadeIn } from '../variants';
 import Questions from './Questions';
-
+import mh3 from '../assets/mh3.png'
+import mh1 from '../assets/mh1.png'
+import mh2 from '../assets/mh2.png'
+import mh4 from '../assets/mh4.png'
+import mh8 from '../assets/mh8.png'
+import mh7 from '../assets/mh7.png'
+import arrowDown from '../assets/arrow-down.svg'
 
 
 export function Landing() {
@@ -25,7 +31,7 @@ export function Landing() {
 
               </div>
               <div className='w-1/2'>
-                  <img src={`../src/assets/mh1.png`} className=""  alt="Description" />
+                  <img src={mh1} className=""  alt="Description" />
               </div>
           </div>
 
@@ -41,15 +47,15 @@ export function Landing() {
                 <img src={'../src/assets/mh2.png'} className="h-40"/>
                 <h2 className='font-bold text-2xl'>Write your emotions</h2>
               </div>
-              <p className='text-lg'>Write down and keep a journal of how your feeling each day when dealing with a social interaction, pick how it made you
-              feel and explain why it made you feel that way
+              <p className='text-lg'>Write down and keep a journal of how your feeling each day, choose an emotion that shows how you are currently feeling
+              and explain why it made you feel that way
               </p>
             </div>
 
             <div className='flex flex-col gap-5 max-w-sm' >
               <div className='flex items-center gap-1'>
 
-                <img src={'../src/assets/mh3.png'} className="h-40"/>
+                <img src={mh3} className="h-40"/>
                 <h2 className='font-bold text-2xl'>Take some breathing exercises</h2>
               </div>
               <p className='text-lg'>Learn to take deep breathes when dealing with social anxiety with different breathing techniques for different situations that can help a person feel a sense of calm
@@ -58,7 +64,7 @@ export function Landing() {
 
             <div className='flex flex-col gap-5 max-w-sm'>
               <div className='flex items-center gap-1'>
-                <img src={'../src/assets/mh4.png'} className="h-40"/>
+                <img src={mh4} className="h-40"/>
                 <h2 className='font-bold text-2xl'>Recieve daily affirmations</h2>
               </div>
               <p className='text-lg'>Check in everyday to recieve as many daily positive affirmations as you want to help boost your social confidence and overall
@@ -75,33 +81,33 @@ export function Landing() {
           <div className='flex flex-col gap-20 items-center justify-center'>
 
             <div className='flex gap-20 items-center justify-center' data-aos="fade-up">
-                <img src={"../src/assets/mh8.png"} className='h-60' />
+                <img src={mh8} className='h-60' />
                 <div className='flex flex-col gap-3 w-1/3'>
                   <h2 className='text-3xl'>Document your social interactions</h2>
-                  <p className='text-2xl'>Before any social event that you are anxious about write down about the event and question and challenge your negative thoughts</p>
+                  <p className='text-2xl'>Before any social event that you are anxious about write down about the event and answer questions to challenge any negative thoughts you have about it </p>
                 </div>
             </div>
 
-            <img src={'../src/assets/arrow-down.svg'} className='h-20'/>
+            <img src={arrowDown} className='h-20'/>
 
 
             <div className='flex gap-20 items-center justify-center'  data-aos="fade-up">
 
               <div className='flex flex-col gap-3 w-1/3'>
                 <h2 className='text-3xl'>Grow gradually</h2>
-                <p className='text-2xl'>Each completed social interaction will gradually grow your social tree with flowers.</p>
+                <p className='text-2xl'>Each completed social interaction will gradually grow your social tree with flowers that respresent each completed social interaction</p>
               </div>
-              <img src={"../src/assets/mh1.png"} className='h-60' />
+              <img src={mh1} className='h-60' />
 
             </div>
 
-            <img src={'../src/assets/arrow-down.svg'} className='h-20'/>
+            <img src={arrowDown} className='h-20'/>
 
             <div className='flex gap-20 items-center justify-center' data-aos="fade-up">
-              <img src={"../src/assets/mh7.png"} className='h-60' />
+              <img src={mh7} className='h-60' />
               <div className='flex flex-col gap-3 w-1/3'>
                 <h2 className='text-3xl'>Reward yourself</h2>
-                <p className='text-2xl'>Completing each social interaction rewards you with leafs where you can use to earn rewards and a flower that goes on your social tree</p>
+                <p className='text-2xl'>Completing each social interaction rewards you with leafs, which you can use to earn different rewards</p>
               </div>
             </div>
 
@@ -125,22 +131,16 @@ export function Landing() {
 
 
         {/* Footer  bottom links and copyright*/}
-        <footer className='bg-[#44423F] flex justify-between items-center text-white w-full px-10 py-10'>
+        <footer className='bg-[#44423F] flex justify-center items-center text-white w-full px-10 py-10'>
 
           <div className='flex items-center gap-7'>
             <p>&#169; Social Soothe</p>
-            <Link to={`/about`}><p>About</p></Link>
-            <Link to={'privacyPolicy'}><p>Privacy policy</p></Link>
+            <Link to={`/about`}><p className='hover:underline underline-offset-2'>About</p></Link>
+            <Link to={'/privacyPolicy'}><p className='hover:underline underline-offset-2'>Privacy policy</p></Link>
 
           </div>
 
-          <ul className='flex items-center gap-2'>
-            <li><img src={"../src/assets/icons8-instagram-48.png"} className='h-8'/></li>
-            <li><img src={"../src/assets/icons8-facebook-48.png"} className='h-8'/></li>
-            <li><img src={"../src/assets/icons8-youtube-48.png"} className='h-8'/></li>
-            <li><img src={"../src/assets/icons8-twitter.svg"} className='h-8'/></li>
-            <li><img src={"../src/assets/icons8-tiktok-48.png"} className='h-8'/></li>
-          </ul>
+
         </footer>
 
      </div>

@@ -13,6 +13,8 @@ import ReactConfetti from 'react-confetti';
 import { LogIn } from "../components/Login";
 import { getUserCurrentColor } from "../data/dataFunctions";
 import { getLeafCount } from "../data/dataFunctions";
+import bark from '../assets/rb_1364.png'
+import flowerImg from '../assets/cherry-blossom.png'
 
 export function SocialTree() {
     const [cookies, setCookie, removeCookie] = useCookies(null)
@@ -321,13 +323,13 @@ export function SocialTree() {
                                         })
                                     }
                             </div>
-                            <img src="../src/assets/rb_1364.png" className="h-60 mb-10"/>
+                            <img src={bark} className="h-60 mb-10"/>
                         </>
                     }
 
                     {authToken &&
                         <div onClick={showQuestionOne} className="absolute top-10 right-10 rounded-full h-14 w-14 cursor-pointer bg-[#eeeeee] p-4 flex items-center justify-center">
-                            <img src="../src/assets/cherry-blossom.png"/>
+                            <img src={flowerImg}/>
                         </div>
 
                     }

@@ -5,7 +5,9 @@ import React, { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useCookies } from "react-cookie"
 import { useState } from "react"
-import { getUserCurrentColor } from "../data/dataFunctions"
+import logo from '../assets/breeze.png'
+import leafImg from '../assets/leaf-2.png'
+import cog from '../assets/cog.svg'
 
 export function Navbar() {
 
@@ -105,7 +107,7 @@ export function Navbar() {
         <div className="flex justify-between p-2 px-5 items-center fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: darkBg }}>
             <div className='flex gap-12 items-center'>
                 <div className="flex gap-3">
-                    <img src={"../src/assets/breeze.png"} className="h-9"/>
+                    <img src={logo} className="h-9"/>
                     <Link to={"/"}><h1 className='text-2xl font-bold text-white'>Social<span className='text-3xl'>.</span>Soothe</h1> </Link>
 
                 </div>
@@ -142,7 +144,7 @@ export function Navbar() {
 
                 {authToken &&
                     <div className="flex gap-5">
-                        <p className="flex items-center justify-center gap-2"><img src={'../src/assets/leaf-2.png'} className="h-5"/> {coins}</p>
+                        <p className="flex items-center justify-center gap-2"><img src={leafImg} className="h-5"/> {coins}</p>
                         <button onClick={handleLogout} className='hover:underline underline-offset-8 decoration-4 transition-all duration-300 ease-in-out'>Log out</button>
                     </div>
 
@@ -156,7 +158,7 @@ export function Navbar() {
 
                 {authToken &&
                                 <Link to={"/settings"} className='hover:underline underline-offset-8 decoration-4 transition-all duration-300 ease-in-out'>
-                                    <img src={"../src/assets/cog.svg"} className="h-5"/>
+                                    <img src={cog} className="h-5"/>
                                 </Link>
                 }
 

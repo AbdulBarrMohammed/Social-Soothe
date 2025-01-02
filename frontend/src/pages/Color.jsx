@@ -2,6 +2,7 @@ import { useCookies } from "react-cookie";
 import { useEffect } from "react";
 import { useState } from "react";
 import { getUserCurrentColor } from "../data/dataFunctions";
+import leafImg from '../assets/leaf-2.png'
 
 
 export function Color({color}) {
@@ -112,7 +113,7 @@ export function Color({color}) {
                 <div className="flex gap-4 items-center">
                     <div className="flex items-cente gap-2">
                         <p>{color.price}</p>
-                        <img src={'../src/assets/leaf-2.png'} className="h-5"/>
+                        <img src={leafImg} className="h-5"/>
 
                     </div>
 

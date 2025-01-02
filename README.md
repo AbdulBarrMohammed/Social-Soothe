@@ -1,8 +1,6 @@
 # Social Soothe
 
-Social Soothe is a web application that helps people cope with social anxiety. Users can take daily mood journals, create a social tree where each flower on the tree is a different social 
-interaction that they described and completed, take breathing exercises to calm their anxiety, earn rewards for completing mood journals and adding to their social tree and have a dashboard 
-that summarizes their overall mental state based on what they did on the app.
+Social Soothe is a web application designed to help individuals manage social anxiety. Users can maintain daily mood journals, build a "social tree" where each flower represents a social interaction they have described and completed, and practice breathing exercises to alleviate anxiety. The web app also rewards users for completing mood journals and adding flowers to their social tree. Additionally, it provides a personalized dashboard summarizing their overall mental state based on their activity within the app.
 
 ## Functionality 
 

@@ -1,36 +1,40 @@
-
-
+import home from '../assets/home.svg'
+import wind from '../assets/tailwind.svg'
+import journal from '../assets/journal.svg'
+import tree from '../assets/tree-outline.svg'
+import heart from '../assets/heart.svg'
+import award from '../assets/trophy-award.svg'
 
 export const pageDataLoggedIn = [
     {
         name: "Dashboard",
         path: "/dashboard",
-        img: "../src/assets/home.svg"
+        img: home
     },
     {
         name: "Breathe exercise",
         path: "/breatheIntro",
-        img: "../src/assets/tailwind.svg"
+        img: wind
     },
     {
         name: "Journals",
         path: "/journals",
-        img: "../src/assets/journal.svg"
+        img: journal
     },
     {
         name: "Social Tree",
         path: "/socialTree",
-        img: "../src/assets/tree-outline.svg"
+        img: tree
     },
     {
         name: "Daily Affirmation",
         path: "/affirmations",
-        img: "../src/assets/heart.svg"
+        img: heart
     },
     {
         name: "Prizes",
         path: "/awards/Sounds",
-        img: "../src/assets/trophy-award.svg"
+        img: award
     },
 
 ]

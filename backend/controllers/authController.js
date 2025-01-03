@@ -31,7 +31,7 @@ async function signUpPost(req, res, next) {
               const signUp = await db.insertNewUser(email, hashedPassword, gender, coins, currColor, currSound);
 
               //Setting user token
-              const token = jwt.sign({ email }, 'secret', {expiresIn: '1hr' })
+              const token = jwt.sign({ email }, process.env.JWT_SECRET , {expiresIn: '1hr' })
               res.json({ email, token })
 
           } catch (dbError) {

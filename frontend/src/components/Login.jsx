@@ -29,16 +29,21 @@ export function LogIn() {
     //Get user data
     const data = await response.json()
 
+
     //Check if the user exists first
-    if (data.detail == "User does not exist") {
+    if (data.detail == "User does not exist" || data.detail == "Login failed") {
       setLoginError(true);
-      navigate("/login");
+      //removeCookie("Email");
+      //removeCookie("AuthToken")
+
+
     }
     else {
       //Set user cookies and authtoken
-      navigate("/dashboard")
+
       setCookie('Email', data.email)
       setCookie('AuthToken', data.token)
+      navigate("/dashboard")
     }
 
   }
@@ -67,7 +72,7 @@ export function LogIn() {
                 </div>
 
                 <div className='text-center'>
-                  {loginError && <p className="text-red-500">Email or password is wrong</p>}
+                  {loginError && <p className="text-red-500">Wrong email or password</p>}
                     <p>Dont have an account? <a className='font-bold cursor-pointer' onClick={() => navigate("/signUp")}>Sign up</a></p>
                 </div>
 

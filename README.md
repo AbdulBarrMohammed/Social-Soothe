@@ -41,17 +41,21 @@ The following **extensions** are implemented:
 ## Image Walkthrough
 
 Landing Page 
+
 <img width="1438" alt="Screenshot 2025-01-01 at 3 33 55 PM" src="https://github.com/user-attachments/assets/2d23f020-b9ac-4788-ae4a-27a7f2d849f3" />
 
 
 Mood Journals Page
+
 <img width="1436" alt="Screenshot 2025-01-01 at 3 54 54 PM" src="https://github.com/user-attachments/assets/a57b9b02-ccfe-460e-9a27-cb42b20b332f" />
 
 
 Breathing  Exercise Page
+
 <img width="1440" alt="Screenshot 2025-01-01 at 4 49 43 PM" src="https://github.com/user-attachments/assets/d8f91dbd-9ed2-4723-b8cd-7875181665ce" />
 
 Social Tree Page
+
 <img width="1439" alt="Screenshot 2025-01-01 at 3 55 15 PM" src="https://github.com/user-attachments/assets/145d04fa-5131-42d6-bcab-a7d61d338e0c" />
 
 

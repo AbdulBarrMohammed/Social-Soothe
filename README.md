@@ -41,7 +41,7 @@ The following **extensions** are implemented:
 * AOS
 * Render
 
-## Image Walkthrough
+## Layout Images
 
 Landing Page 
 

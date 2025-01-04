@@ -3,6 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css"
 import { saFacts } from '../data/factsData';
 import { useNavigate } from 'react-router-dom';
+import down from '../assets/chevron-down.svg'
+import up from '../assets/chevron-up.svg'
 
 const Questions = () => {
   // Used to state to open social anxiety question drop down button
@@ -35,10 +37,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdown((prev) => !prev)}>
 
                 {!isDropdown ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>
@@ -57,10 +59,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdownTwo((prev) => !prev)}>
 
                 {!isDropdownTwo ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>
@@ -78,10 +80,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdownThree((prev) => !prev)}>
 
                 {!isDropdown ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>
@@ -98,10 +100,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdownFour((prev) => !prev)}>
 
                 {!isDropdownFour ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>
@@ -119,10 +121,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdownFive((prev) => !prev)}>
 
                 {!isDropdownFive ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>
@@ -140,10 +142,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdownSix((prev) => !prev)}>
 
                 {!isDropdownSix ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>
@@ -160,10 +162,10 @@ const Questions = () => {
               <button onClick={() => setIsDropdownSeven((prev) => !prev)}>
 
                 {!isDropdownSeven ? (
-                  <img src={'../src/assets/chevron-down.svg'} className='h-10' />
+                  <img src={down} className='h-10' />
 
                 ): (
-                  <img src={'../src/assets/chevron-up.svg'} className='h-10' />
+                  <img src={up} className='h-10' />
 
                 )}
               </button>

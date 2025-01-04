@@ -44,7 +44,7 @@ export function Landing() {
         className='bg-[#F0F8FF] flex flex-wrap justify-center items-center px-20 py-28 gap-16 w-full'>
             <div className='flex flex-col gap-5 max-w-sm'>
               <div className='flex items-center gap-1'>
-                <img src={'../src/assets/mh2.png'} className="h-40"/>
+                <img src={mh2} className="h-40"/>
                 <h2 className='font-bold text-2xl'>Write your emotions</h2>
               </div>
               <p className='text-lg'>Write down and keep a journal of how your feeling each day, choose an emotion that shows how you are currently feeling

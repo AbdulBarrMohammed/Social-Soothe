@@ -12,14 +12,7 @@ const colorRouter = require("./routes/colorRouter")
 app.use(cors({
     origin: ['http://localhost:8000', "https://social-soothe-frontend.onrender.com"], credentials: true
 }))
-//app.options('*', cors())
-/*
-app.use(cors({
-    origin: "https://social-soothe-frontend.onrender.com" || "http://localhost:3000", // Replace with your frontend URL in production
-    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
-    credentials: true, // Allow cookies if needed
-  }));
-app.use(express.json()); */
+
 
 
 // Middleware to parse URL-encoded bodies (for form submissions)

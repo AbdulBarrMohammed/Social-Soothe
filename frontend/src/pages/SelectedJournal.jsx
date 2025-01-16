@@ -38,7 +38,7 @@ export function SelectedJournal() {
          */
         async function loadJournal() {
             try {
-                const res = await fetch(`http://localhost:8000/journals/journal/${id}`)
+                const res = await fetch(`https://social-soothe.onrender.com/journals/journal/${id}`)
                 const data = await res.json();
                 setJournal(data)
 
@@ -66,7 +66,7 @@ export function SelectedJournal() {
         //First checks if user wants to delete journal entry
         if (confirm("Are you sure you want to delete?")) {
             try {
-                const res = await fetch(`http://localhost:8000/journals/journal/delete/${id}`)
+                const res = await fetch(`https://social-soothe.onrender.com/journals/journal/delete/${id}`)
                 const data = await res.json();
             } catch(err) {
                 console.log(err)
@@ -104,7 +104,7 @@ export function SelectedJournal() {
     async function handleEditJournalSubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:8000/journals/journal/update/${id}`, {
+            const response = await fetch(`https://social-soothe.onrender.com/journals/journal/update/${id}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({id, title, content})

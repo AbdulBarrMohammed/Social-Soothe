@@ -44,11 +44,11 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
      */
     const getData = async () => {
         try {
-            const resCoins = await fetch(`http://localhost:8000/user/${email}`)
+            const resCoins = await fetch(`https://social-soothe.onrender.com/user/${email}`)
             const dataCoins = await resCoins.json();
             setCurrCoins(dataCoins.coins)
 
-            const resSounds = await fetch(`http://localhost:8000/sounds/${email}`)
+            const resSounds = await fetch(`https://social-soothe.onrender.com/sounds/${email}`)
             const dataSounds = await resSounds.json();
 
             setSounds(dataSounds)
@@ -138,7 +138,7 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                         //First checks if user wants to buy item
                         if (confirm("Are you sure you want to purchase this?")) {
 
-                            const response = await fetch(`http://localhost:8000/user/update`, {
+                            const response = await fetch(`https://social-soothe.onrender.com/user/update`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({coins, email})
@@ -146,7 +146,7 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
 
                             const name = audioSrc.title
                             const src = audioSrc.wavSound
-                            const responseSound = await fetch(`http://localhost:8000/sounds/create`, {
+                            const responseSound = await fetch(`https://social-soothe.onrender.com/sounds/create`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({email, name, src})

@@ -8,13 +8,18 @@ const flowerRouter = require("./routes/flowerRoutes")
 const soundRouter = require("./routes/soundRouter")
 const colorRouter = require("./routes/colorRouter")
 
-//app.use(cors())
+app.use(cors())
+app.use(cors({
+    origin: "https://social-soothe-frontend.onrender.com"
+}))
+/*
 app.use(cors({
     origin: "https://social-soothe-frontend.onrender.com" || "http://localhost:3000", // Replace with your frontend URL in production
     methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed HTTP methods
     credentials: true, // Allow cookies if needed
   }));
-app.use(express.json());
+app.use(express.json()); */
+
 
 // Middleware to parse URL-encoded bodies (for form submissions)
 app.use(express.urlencoded({ extended: true }));

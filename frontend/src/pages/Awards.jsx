@@ -35,7 +35,7 @@ export function Awards() {
     const setSounds = async () => {
         try {
 
-            const resSounds = await fetch(`https://social-soothe.onrender.com/sounds/${email}`)
+            const resSounds = await fetch(` http://localhost:8000/sounds/${email}`)
             const dataSounds = await resSounds.json();
 
             setCurrSounds(filterAvailableSound(dataSounds))
@@ -54,7 +54,7 @@ export function Awards() {
     const setColors = async () => {
         try {
 
-            const resColors = await fetch(`https://social-soothe.onrender.com/colors/${email}`)
+            const resColors = await fetch(`http://localhost:8000/colors/${email}`)
             const dataColors = await resColors.json();
 
             setCurrColors(filterAvailableColor(dataColors))

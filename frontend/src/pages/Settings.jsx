@@ -32,12 +32,12 @@ export function Settings() {
         try {
 
             //Get user colors from backend route
-            const resColors = await fetch(`https://social-soothe.onrender.com/colors/${email}`)
+            const resColors = await fetch(`http://localhost:8000/colors/${email}`)
             const dataColors = await resColors.json();
             setColors(dataColors)
 
             //Get user sounds from backend route
-            const resSounds = await fetch(`https://social-soothe.onrender.com/sounds/${email}`)
+            const resSounds = await fetch(`http://localhost:8000/sounds/${email}`)
             const dataSounds = await resSounds.json();
             setSounds(dataSounds)
 
@@ -91,7 +91,7 @@ export function Settings() {
         if (currBgSound) {
             const sound = currBgSound
             try {
-                const response = await fetch(`https://social-soothe.onrender.com/user/sound/update`, {
+                const response = await fetch(`http://localhost:8000/user/sound/update`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({sound, email})
@@ -109,7 +109,7 @@ export function Settings() {
         if (currBgColor) {
             const color = currBgColor
             try {
-                const response = await fetch(`https://social-soothe.onrender.com/user/color/update`, {
+                const response = await fetch(`http://localhost:8000/user/color/update`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({color, email})
@@ -132,11 +132,11 @@ export function Settings() {
     },[])
 
     async function deleteAccount() {
-        const resUser = await fetch(`https://social-soothe.onrender.com/user/${email}`)
+        const resUser = await fetch(`http://localhost:8000/user/${email}`)
         const dataUser = await resUser.json();
 
         const id = dataUser.id
-        const resDelete = await fetch(`https://social-soothe.onrender.com/user/delete/${id}`)
+        const resDelete = await fetch(`http://localhost:8000/user/delete/${id}`)
         const dataDelete = await resDelete.json();
         if (dataDelete) {
             removeCookie("Email");

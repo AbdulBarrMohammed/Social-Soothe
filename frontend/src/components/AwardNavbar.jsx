@@ -11,10 +11,10 @@ export function AwardNavbar() {
     const setBgColor = async () => {
         try {
             //Get users current pick for a background color
-            const resColor = await fetch(`https://social-soothe.onrender.com/user/${email}`)
+            const resColor = await fetch(`http://localhost:8000/user/${email}`)
             const dataColor = await resColor.json();
 
-            const resColors = await fetch(`https://social-soothe.onrender.com/colors/${email}`)
+            const resColors = await fetch(`http://localhost:8000/colors/${email}`)
             const dataColors = await resColors.json();
 
             if (dataColor.currColor.toLowerCase() == 'blue') {

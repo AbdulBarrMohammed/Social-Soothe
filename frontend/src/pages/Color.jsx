@@ -24,12 +24,12 @@ export function Color({color}) {
         try {
 
             //User color data
-            const resColor = await fetch(`https://social-soothe.onrender.com/colors/${email}`)
+            const resColor = await fetch(`http://localhost:8000/colors/${email}`)
             const dataColors = await resColor.json();
             setColors(dataColors)
 
             //User coins data
-            const resCoins = await fetch(`https://social-soothe.onrender.com/user/${email}`)
+            const resCoins = await fetch(`http://localhost:8000/user/${email}`)
             const dataCoins = await resCoins.json();
             setCurrLeafs(dataCoins.coins)
         } catch(err) {
@@ -65,7 +65,7 @@ export function Color({color}) {
 
                     //Add new leaf price to database
                     try {
-                        const response = await fetch(`https://social-soothe.onrender.com/user/update`, {
+                        const response = await fetch(`http://localhost:8000/user/update`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({coins, email})
@@ -79,7 +79,7 @@ export function Color({color}) {
                         const light = color.light
                         const lightest = color.lightest
 
-                        const responseColor = await fetch(`https://social-soothe.onrender.com/colors/create`, {
+                        const responseColor = await fetch(`http://localhost:8000/colors/create`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({email, name, dark, semiDark, medium, light, lightest})

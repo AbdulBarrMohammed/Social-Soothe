@@ -78,7 +78,7 @@ export function EditFlower() {
     async function handleSubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch(`https://social-soothe.onrender.com/flowers/flower/update/${id}`, {
+            const response = await fetch(`http://localhost:8000/flowers/flower/update/${id}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({id, color, questionOne,

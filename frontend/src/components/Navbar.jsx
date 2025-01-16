@@ -28,10 +28,10 @@ export function Navbar() {
         if (userEmail) {
 
             try {
-                const resColor = await fetch(`https://social-soothe.onrender.com/user/${userEmail}`)
+                const resColor = await fetch(`http://localhost:8000/user/${userEmail}`)
                 const dataColor = await resColor.json();
 
-                const resColors = await fetch(`https://social-soothe.onrender.com/colors/${userEmail}`)
+                const resColors = await fetch(`http://localhost:8000/colors/${userEmail}`)
 
                 const dataColors = await resColors.json();
 
@@ -77,7 +77,7 @@ export function Navbar() {
     const getCoins = async () => {
         if (userEmail) {
             try {
-                const res = await fetch(`https://social-soothe.onrender.com/user/${userEmail}`)
+                const res = await fetch(`http://localhost:8000/user/${userEmail}`)
                 const data = await res.json();
                 setCoins(data.coins)
             } catch(err) {

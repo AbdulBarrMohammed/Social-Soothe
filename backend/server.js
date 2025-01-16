@@ -10,10 +10,9 @@ const colorRouter = require("./routes/colorRouter")
 
 //app.use(cors())
 app.use(cors({
-    origin: "*",
-    credentials: true,
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    orgin: "https://social-soothe-frontend.onrender.com"
 }))
+app.options('*', cors())
 /*
 app.use(cors({
     origin: "https://social-soothe-frontend.onrender.com" || "http://localhost:3000", // Replace with your frontend URL in production

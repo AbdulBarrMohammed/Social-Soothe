@@ -19,12 +19,13 @@ export function LogIn() {
   async function handleSubmit(e) {
     e.preventDefault()
 
-    const response = await fetch(`https://social-soothe-frontend.onrender.com/login`, {
+    const response = await fetch(`https://social-soothe.onrender.com/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({email, password})
 
     })
+
 
     //Get user data
     const data = await response.json()
@@ -42,6 +43,7 @@ export function LogIn() {
       //Set user cookies and authtoken
 
       setCookie('Email', data.email)
+      console.log(data.email, 'here os the email <-')
       setCookie('AuthToken', data.token)
       navigate("/dashboard")
     }

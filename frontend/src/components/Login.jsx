@@ -19,7 +19,7 @@ export function LogIn() {
   async function handleSubmit(e) {
     e.preventDefault()
 
-    const response = await fetch(`/api/login`, {
+    const response = await fetch(`social-soothe-backend.vercel.app/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({email, password}),

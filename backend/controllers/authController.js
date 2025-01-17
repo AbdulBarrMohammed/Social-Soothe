@@ -65,7 +65,7 @@ async function logInPost(req, res) {
 
     //Check and compare inputted password to hasedpassword
     const success = await bcrypt.compare(password, user.password);
-    const token = jwt.sign({ email }, 'secret', {expiresIn: '1hr' })
+    const token = jwt.sign({ email }, process.env.JWT_SECRET , {expiresIn: '1hr' })
     if (success) {
       //res.json({ 'email' : user.email, token})
       return res.status(200).json({ email: user.email, token });
@@ -75,7 +75,7 @@ async function logInPost(req, res) {
       return res.status(401).json({ detail: "Login failed" });
     }
   } catch(err) {
-    res.status(500).json({ message: 'Error authenticating user' });
+    res.status(500).json({ message: 'Error authenticating user', error: err.message });
   }
 
 }

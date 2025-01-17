@@ -4,7 +4,7 @@ const authController = require("../controllers/authController");
 const router = Router();
 
 router.post("/api/signup", authController.signUpPost);
-router.post("/api/login", authController.logInPost);
+router.post("/login", authController.logInPost);
 router.get("/api/user/:email", authController.getUserInfo);
 router.post("/api/user/update", authController.updateCoin);
 router.post("/api/user/sound/update", authController.updateSound);

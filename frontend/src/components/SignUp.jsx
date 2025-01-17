@@ -16,7 +16,7 @@ export function SignUp() {
   async function handleSubmit(e) {
     e.preventDefault()
 
-    const response = await fetch(`/api/signup`, {
+    const response = await fetch(`https://social-soothe.onrender.com/api/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({email, password, gender})

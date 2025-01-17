@@ -35,9 +35,9 @@ export function LogIn() {
 
     console.log(response.headers.get("Content-Type"));
 
-    let datas;
+    let data;
     try {
-      datas = await response.json();
+      data = await response.json();
     } catch (err) {
       console.error("Failed to parse JSON:", err);
       return;
@@ -45,7 +45,8 @@ export function LogIn() {
 
 
     //Get user data
-    const data = await response.json()
+
+    //const data = await response.json()
     console.log(data, 'printing data')
 
 

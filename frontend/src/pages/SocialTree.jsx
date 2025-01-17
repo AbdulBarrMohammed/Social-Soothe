@@ -61,7 +61,7 @@ export function SocialTree() {
     */
     async function loadFlowers() {
         try {
-            const resFlowers = await fetch(`https://social-soothe.onrender.com/tree/flowers/${email}`)
+            const resFlowers = await fetch(`https://social-soothe.onrender.com/api/tree/flowers/${email}`)
             const dataFlowers = await resFlowers.json();
             if (dataFlowers) {
                 setFlowers(dataFlowers)
@@ -82,7 +82,7 @@ export function SocialTree() {
         if (currId) {
 
             try {
-                const res = await fetch(`https://social-soothe.onrender.com/flowers/flower/${currId}`)
+                const res = await fetch(`https://social-soothe.onrender.com/api/flowers/flower/${currId}`)
                 const data = await res.json();
                 setDone(data.done)
                 setFlower(data)
@@ -140,7 +140,7 @@ export function SocialTree() {
                 //add 5 coins to user coins
                 let coins = currLeafs + 5
                 try {
-                    const response = await fetch(`/api/user/update`, {
+                    const response = await fetch(`https://social-soothe.onrender.com/api/user/update`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({coins, email})
@@ -149,7 +149,7 @@ export function SocialTree() {
                     ///update the flower is be checked is true
                     const checked = true
                     setIsChecked(true)
-                    const responseChecked = await fetch(`/api/flowers/flower/check/update/${currId}`, {
+                    const responseChecked = await fetch(`https://social-soothe.onrender.com/api/flowers/flower/check/update/${currId}`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({currId, checked})

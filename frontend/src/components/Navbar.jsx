@@ -77,7 +77,7 @@ export function Navbar() {
     const getCoins = async () => {
         if (userEmail) {
             try {
-                const res = await fetch(`/api/user/${userEmail}`)
+                const res = await fetch(`https://social-soothe.onrender.com/api/user/${userEmail}`)
                 const data = await res.json();
                 setCoins(data.coins)
             } catch(err) {

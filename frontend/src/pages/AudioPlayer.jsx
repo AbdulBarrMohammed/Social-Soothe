@@ -138,7 +138,7 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
                         //First checks if user wants to buy item
                         if (confirm("Are you sure you want to purchase this?")) {
 
-                            const response = await fetch(`/api/user/update`, {
+                            const response = await fetch(`https://social-soothe.onrender.com/api/user/update`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({coins, email})
@@ -146,7 +146,7 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
 
                             const name = audioSrc.title
                             const src = audioSrc.wavSound
-                            const responseSound = await fetch(`/api/sounds/create`, {
+                            const responseSound = await fetch(`https://social-soothe.onrender.com/api/sounds/create`, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({email, name, src})

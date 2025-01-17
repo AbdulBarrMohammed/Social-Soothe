@@ -104,7 +104,7 @@ export function SelectedJournal() {
     async function handleEditJournalSubmit(e) {
         e.preventDefault();
         try {
-            const response = await fetch(`/api/journals/journal/update/${id}`, {
+            const response = await fetch(`https://social-soothe.onrender.com/api/journals/journal/update/${id}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({id, title, content})

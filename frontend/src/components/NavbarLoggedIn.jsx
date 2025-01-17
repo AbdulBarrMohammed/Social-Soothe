@@ -18,7 +18,7 @@ export function NavbarLoggedIn() {
 
     const getData = async () => {
         try {
-            const resColor = await fetch(`/api/user/${userEmail}`)
+            const resColor = await fetch(`https://social-soothe.onrender.com/api/user/${userEmail}`)
             const dataColor = await resColor.json();
 
             const resColors = await fetch(`/api/colors/${userEmail}`)

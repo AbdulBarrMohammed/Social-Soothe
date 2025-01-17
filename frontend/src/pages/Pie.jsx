@@ -25,7 +25,7 @@ export const PieChart = () => {
     const getData = async () => {
 
         try {
-            const res = await fetch(`/api/journals/${userEmail}`)
+            const res = await fetch(`https://social-soothe.onrender.com/api/journals/${userEmail}`)
             const journalData = await res.json();
 
             //set user journals

@@ -7,10 +7,10 @@
      */
 export async function getUserCurrentColor(email, setLightestBg, setButtonColor) {
     try {
-        const resColor = await fetch(`http://localhost:8000/user/${email}`)
+        const resColor = await fetch(`/api/user/${email}`)
         const dataColor = await resColor.json();
 
-        const resColors = await fetch(`http://localhost:8000/colors/${email}`)
+        const resColors = await fetch(`/api/colors/${email}`)
         const dataColors = await resColors.json();
 
         if (dataColor.currColor.toLowerCase() == 'blue') {
@@ -40,7 +40,7 @@ export async function getUserCurrentColor(email, setLightestBg, setButtonColor) 
      */
 export async function getJournalData(userEmail, setJournals) {
     try {
-        const res = await fetch(`http://localhost:8000/journals/${userEmail}`)
+        const res = await fetch(`/api/journals/${userEmail}`)
         const journalData = await res.json();
 
         //set user journals
@@ -58,10 +58,10 @@ export async function getJournalData(userEmail, setJournals) {
      */
 export async function getCurrentSound(email, setSounds, setDefaultBgSound, setBgSound) {
     try {
-        const res = await fetch(`http://localhost:8000/user/${email}`)
+        const res = await fetch(`/api/user/${email}`)
         const data = await res.json();
 
-        const resSounds = await fetch(`http://localhost:8000/sounds/${email}`)
+        const resSounds = await fetch(`/api/sounds/${email}`)
         const dataSounds = await resSounds.json();
         let foundSound = false
 
@@ -104,7 +104,7 @@ export async function getCurrentSound(email, setSounds, setDefaultBgSound, setBg
      */
 export async function getLeafCount(email, setCurrLeafs) {
     try {
-        const res = await fetch(`http://localhost:8000/user/${email}`)
+        const res = await fetch(`/api/user/${email}`)
         const data = await res.json();
         setCurrLeafs(data.coins)
     } catch(err) {

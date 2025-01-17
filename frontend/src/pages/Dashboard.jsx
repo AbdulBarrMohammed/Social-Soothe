@@ -52,7 +52,7 @@ export function Dashboard() {
     async function getTreeData() {
 
         try {
-            const res = await fetch(`https://social-soothe.onrender.com/tree/flowers/${email}`)
+            const res = await fetch(`/api/tree/flowers/${email}`)
             const data = await res.json();
 
             setFlowerCount(data.length);
@@ -85,10 +85,10 @@ export function Dashboard() {
     const getData = async () => {
 
         try {
-            const resColors = await fetch(`http://localhost:8000/colors/${email}`)
+            const resColors = await fetch(`/api/colors/${email}`)
             const dataColors = await resColors.json();
 
-            const resSounds = await fetch(`http://localhost:8000/sounds/${email}`)
+            const resSounds = await fetch(`/api/sounds/${email}`)
             const dataSounds = await resSounds.json();
 
             //Journal data to get journal entry count
@@ -97,7 +97,7 @@ export function Dashboard() {
             setJournalCount(journalData.length)
 
             //Leaf count
-            const resLeaf = await fetch(`http://localhost:8000/user/${email}`)
+            const resLeaf = await fetch(`/api/user/${email}`)
             const dataLeaf = await resLeaf.json();
             setLeafCount(dataLeaf.coins);
 

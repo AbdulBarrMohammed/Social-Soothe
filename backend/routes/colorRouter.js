@@ -3,8 +3,8 @@ const colorController = require("../controllers/colorsController");
 
 const router = Router();
 
-router.get("/colors/:email", colorController.displayColors);
-router.post("/colors/create", colorController.createColorPost)
+router.get("/api/colors/:email", colorController.displayColors);
+router.post("/api/colors/create", colorController.createColorPost)
 
 
 module.exports = router;

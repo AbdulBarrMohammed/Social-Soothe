@@ -3,11 +3,11 @@ const journalController = require("../controllers/journalController");
 
 const router = Router();
 
-router.get("/journals/:email", journalController.displayJournals);
-router.post("/journals/create", journalController.createJournalPost)
-router.get("/journals/journal/:id", journalController.getSelectedJournal)
-router.get("/journals/journal/delete/:id", journalController.deleteJournal)
-router.post("/journals/journal/update/:id", journalController.editJournalPost);
-router.get("/search/:query/:email", journalController.searchGet);
+router.get("/api/journals/:email", journalController.displayJournals);
+router.post("/api/journals/create", journalController.createJournalPost)
+router.get("/api/journals/journal/:id", journalController.getSelectedJournal)
+router.get("/api/journals/journal/delete/:id", journalController.deleteJournal)
+router.post("/api/journals/journal/update/:id", journalController.editJournalPost);
+router.get("/api/search/:query/:email", journalController.searchGet);
 
 module.exports = router;

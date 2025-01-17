@@ -27,7 +27,7 @@ export function CreateJournal() {
          */
     const getLeafs = async () => {
         try {
-            const res = await fetch(`http://localhost:8000/user/${email}`)
+            const res = await fetch(`/api/user/${email}`)
             const data = await res.json();
             setCurrLeafs(data.coins)
         } catch(err) {
@@ -52,7 +52,7 @@ export function CreateJournal() {
         setFormModal(false)
 
         //Add journal to database
-        const response = await fetch(`http://localhost:8000/journals/create`, {
+        const response = await fetch(`/api/journals/create`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({email, title, content, mood})
@@ -62,7 +62,7 @@ export function CreateJournal() {
           //Add two to current coin amount
           let coins = currLeafs + 2
           try {
-              const response = await fetch(`http://localhost:8000/user/update`, {
+              const response = await fetch(`/api/user/update`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({coins, email})

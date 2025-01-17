@@ -20,7 +20,7 @@ export async function submitAnswers(email, questionOne, questionTwo, questionThr
     const y = Math.random() * 350;
 
     //Add flower to database
-    const response = await fetch(`http://localhost:8000/flowers/create`, {
+    const response = await fetch(`/api/flowers/create`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({email, questionOne, questionTwo, questionThree, questionFour, questionFive, questionSix, questionSeven, x, y})
@@ -82,8 +82,8 @@ export function increment(index, input, setQuestionSix, setShowQuestions, setSho
     */
 export async function handleColorChange(done, currId, setOpenFlowerModal) {
         try {
-            let color = done ?  "#F79BB4" : "#808080"; //F79BB4 808080 #59033
-            const response = await fetch(`http://localhost:8000/flowers/flower/color/update/${currId}`, {
+            let color = done ?  "#F79BB4" : "#808080";
+            const response = await fetch(`/api/flowers/flower/color/update/${currId}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({currId, color ,done})})
@@ -104,7 +104,7 @@ export async function handleColorChange(done, currId, setOpenFlowerModal) {
 export async function deleteFlower(currId) {
     if (confirm("Are you sure you want to delete?")) {
         try {
-            const res = await fetch(`http://localhost:8000/flowers/flower/delete/${currId}`)
+            const res = await fetch(`/api/flowers/flower/delete/${currId}`)
             const data = await res.json();
         } catch(err) {
             console.log(err)
@@ -123,7 +123,7 @@ export async function deleteFlower(currId) {
 export async function addQuestionSeven(currId, questionSeven, setQuestionSevenModal) {
     try {
         const id = currId
-        const response = await fetch(`http://localhost:8000/flowers/flower/questionSeven/update/${currId}`, {
+        const response = await fetch(`/api/flowers/flower/questionSeven/update/${currId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({id, questionSeven})})

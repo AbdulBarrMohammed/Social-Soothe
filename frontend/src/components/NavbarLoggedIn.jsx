@@ -18,10 +18,10 @@ export function NavbarLoggedIn() {
 
     const getData = async () => {
         try {
-            const resColor = await fetch(`http://localhost:8000/user/${userEmail}`)
+            const resColor = await fetch(`/api/user/${userEmail}`)
             const dataColor = await resColor.json();
 
-            const resColors = await fetch(`http://localhost:8000/colors/${userEmail}`)
+            const resColors = await fetch(`/api/colors/${userEmail}`)
             const dataColors = await resColors.json();
 
             if (dataColor.currColor.toLowerCase() == 'blue') {

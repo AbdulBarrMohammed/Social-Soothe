@@ -3,9 +3,9 @@ const soundController = require("../controllers/soundsController");
 
 const router = Router();
 
-router.get("/sounds/:email", soundController.displaySounds);
-router.post("/sounds/create", soundController.createSoundPost)
-router.get("/sounds/sound/:id", soundController.getSelectedSound)
+router.get("/api/sounds/:email", soundController.displaySounds);
+router.post("/api/sounds/create", soundController.createSoundPost)
+router.get("/api/sounds/sound/:id", soundController.getSelectedSound)
 
 
 

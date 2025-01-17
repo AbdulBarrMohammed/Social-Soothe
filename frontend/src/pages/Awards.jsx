@@ -54,7 +54,7 @@ export function Awards() {
     const setColors = async () => {
         try {
 
-            const resColors = await fetch(`http://localhost:8000/colors/${email}`)
+            const resColors = await fetch(`/api/colors/${email}`)
             const dataColors = await resColors.json();
 
             setCurrColors(filterAvailableColor(dataColors))

@@ -17,7 +17,7 @@ app.use(cors({
 })) */
 
 
-
+app.use(express.static("dist"))
 
 // Middleware to parse URL-encoded bodies (for form submissions)
 app.use(express.json());
@@ -29,7 +29,7 @@ app.use("/", flowerRouter)
 app.use("/", soundRouter)
 app.use("/", colorRouter)
 
-app.use(express.static("dist"))
+
 
 module.exports = app;
 

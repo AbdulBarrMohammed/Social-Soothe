@@ -1,84 +1,95 @@
-
+import calmMountain from "../assets/sounds/calm-mountain-creek-ambience-228231.wav";
+import calmingRain from "../assets/sounds/calming-rain-1.wav";
+import jungleNature from "../assets/sounds/jungle-nature-229896.wav";
+import firePlace from "../assets/sounds/fire-place-189399.wav";
+import firewoodBurning from "../assets/sounds/firewood-burning-sound-179862.wav";
+import countrysideMorning from "../assets/sounds/countryside-morning-sounds-246032.wav";
+import lightRain from "../assets/sounds/light-rain-2.wav";
+import morningBreezeAndBirds from "../assets/sounds/morning-breeze-and-birds-35105.wav";
+import ocean from "../assets/sounds/ocean-2.wav";
+import rainAndThunder from "../assets/sounds/rain-and-thunder-sfx-5.wav";
+import seaWaves from "../assets/sounds/sea-waves-1.wav";
+import waterfallSounds from "../assets/sounds/waterfall-sounds-259625.wav";
+import summerLakeWaves from "../assets/sounds/waves-on-the-lake-in-summer-time-in-wav-5.wav";
 
 export const sounds = [
     {
-        wavSound: "../../src/assets/sounds/calm-mountain-creek-ambience-228231.wav",
+        wavSound: calmMountain,
         title: "Calm mountain creek",
         price: 15
     },
     {
-        wavSound: "../../src/assets/sounds/calming-rain-1.wav",
+        wavSound: calmingRain,
         title: "Calm rain",
         price: 250
     },
 
     {
-        wavSound: "../../src/assets/sounds/jungle-nature-229896.wav",
+        wavSound: jungleNature,
         title: "Jungle nature",
         price: 400
     },
 
     {
-        wavSound: "../../src/assets/sounds/fire-place-189399.wav",
+        wavSound: firePlace,
         title: "Fire place",
         price: 450
     },
 
     {
-        wavSound: "../../src/assets/sounds/firewood-burning-sound-179862.wav",
+        wavSound: firewoodBurning,
         title: "Firewood burning",
         price: 470
     },
     {
-        wavSound: "../../src/assets/sounds/countryside-morning-sounds-246032.wav",
+        wavSound: countrysideMorning,
         title: "Countryside morning",
         price: 500
     },
 
     {
-        wavSound: "../../src/assets/sounds/light-rain-2.wav",
+        wavSound: lightRain,
         title: "Light rain",
         price: 550
     },
 
     {
-        wavSound: "../../src/assets/sounds/morning-breeze-and-birds-35105.wav",
+        wavSound: morningBreezeAndBirds,
         title: "Morning breeze and birds",
         price: 600
     },
 
     {
-        wavSound: "../../src/assets/sounds/ocean-2.wav",
+        wavSound: ocean,
         title: "Ocean",
         price: 650
     },
 
     {
-
-    wavSound: "../../src/assets/sounds/rain-and-thunder-sfx-5.wav",
-    title: "Rain and thunder",
-    price: 700
+        wavSound: rainAndThunder,
+        title: "Rain and thunder",
+        price: 700
     },
 
     {
-        wavSound: "../../src/assets/sounds/sea-waves-1.wav",
+        wavSound: seaWaves,
         title: "Sea waves",
         price: 750
     },
 
     {
-        wavSound: "../../src/assets/sounds/waterfall-sounds-259625.wav",
+        wavSound: waterfallSounds,
         title: "Waterfall sounds",
         price: 800
     },
 
     {
-        wavSound: "../../src/assets/sounds/waves-on-the-lake-in-summer-time-in-wav-5.wav",
+        wavSound: summerLakeWaves,
         title: "Summer lake waves",
         price: 850
     },
-
 ]
+
 
 
 /*

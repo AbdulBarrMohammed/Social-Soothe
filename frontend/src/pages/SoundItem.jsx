@@ -2,14 +2,17 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 
+import playPicSrc from "../assets/play.svg"
+import pausePicSrc from "../assets/pause.svg"
+
 
 //Page that display a sound that a user can play and pause in the awards page
 
 export function SoundItem({audioSrc, index, currAudioIndex, setCurrAudioIndex, chosenSound, setChosenSound, currSoundSrc, setCurrSoundSrc }) {
 
     const [isPlaying, setIsPlaying] = useState(false);
-    const playPic =  "../../src/assets/play.svg"
-    const pausePic = "../../src/assets/pause.svg"
+    const playPic =  playPicSrc
+    const pausePic = pausePicSrc
 
     const audioRef = useRef(null);
 

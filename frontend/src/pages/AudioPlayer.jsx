@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useCookies } from "react-cookie";
-import ReactConfetti from 'react-confetti';
 import { getUserCurrentColor } from "../data/dataFunctions";
 import playImg from '../assets/play.svg'
 import pauseImg from '../assets/pause.svg'

@@ -38,8 +38,8 @@ export function Breathe() {
     const [showConfetti, setShowConfetti] = useState(false);
 
 
-    const breatheInAudio =  useRef(new Audio(breatheInWav))//useRef(new Audio("../../src/assets/breathe-in.wav"))
-    const exhaleAudio = useRef(new Audio(exhaleWav))//useRef(new Audio("../../src/assets/exhale.wav"))
+    const breatheInAudio =  useRef(new Audio(breatheInWav))
+    const exhaleAudio = useRef(new Audio(exhaleWav))
     const currBgSound = useRef(null);
 
 

@@ -30,6 +30,7 @@ export function LogIn() {
 
     //Get user data
     const data = await response.json()
+    console.log(data, 'printing data')
 
 
     //Check if the user exists first

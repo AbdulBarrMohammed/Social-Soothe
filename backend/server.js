@@ -15,6 +15,10 @@ const colorRouter = require("./routes/colorRouter")
 app.use(cors({
     origin: ['http://localhost:8000', "https://social-soothe-frontend.onrender.com"], credentials: true
 })) */
+app.use(cors({
+        origin: ['http://localhost:5173', 'https://social-soothe-frontend.onrender.com'],
+        credentials: true,
+}));
 
 
 app.use(express.static("dist"))

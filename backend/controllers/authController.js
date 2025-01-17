@@ -67,10 +67,12 @@ async function logInPost(req, res) {
     const success = await bcrypt.compare(password, user.password);
     const token = jwt.sign({ email }, 'secret', {expiresIn: '1hr' })
     if (success) {
-      res.json({ 'email' : user.email, token})
+      //res.json({ 'email' : user.email, token})
+      return res.status(200).json({ email: user.email, token });
     }
     else {
-      res.json({ detail: "Login failed" })
+      //res.json({ detail: "Login failed" })
+      return res.status(401).json({ detail: "Login failed" });
     }
   } catch(err) {
     res.status(500).json({ message: 'Error authenticating user' });

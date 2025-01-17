@@ -19,13 +19,29 @@ export function LogIn() {
   async function handleSubmit(e) {
     e.preventDefault()
 
-    const response = await fetch(`social-soothe-backend.vercel.app/login`, {
+    const response = await fetch(`/api/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({email, password}),
 
 
     })
+
+    if (!response.ok) {
+      console.error(`HTTP Error: ${response.status}`);
+
+      return;
+    }
+
+    console.log(response.headers.get("Content-Type"));
+
+    let datas;
+    try {
+      datas = await response.json();
+    } catch (err) {
+      console.error("Failed to parse JSON:", err);
+      return;
+    }
 
 
     //Get user data

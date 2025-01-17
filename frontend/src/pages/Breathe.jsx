@@ -7,6 +7,8 @@ import ReactConfetti from "react-confetti";
 import { LogIn } from "../components/Login";
 import { getUserCurrentColor } from "../data/dataFunctions";
 import { getCurrentSound } from "../data/dataFunctions";
+import breatheInWav from '../assets/breathe-in-wav'
+import exhaleWav from '../assets/exhale.wav'
 
 export function Breathe() {
 
@@ -36,8 +38,8 @@ export function Breathe() {
     const [showConfetti, setShowConfetti] = useState(false);
 
 
-    const breatheInAudio = useRef(new Audio("../../src/assets/breathe-in.wav"))
-    const exhaleAudio = useRef(new Audio("../../src/assets/exhale.wav"))
+    const breatheInAudio =  useRef(new Audio(breatheInWav))//useRef(new Audio("../../src/assets/breathe-in.wav"))
+    const exhaleAudio = useRef(new Audio(exhaleWav))//useRef(new Audio("../../src/assets/exhale.wav"))
     const currBgSound = useRef(null);
 
 

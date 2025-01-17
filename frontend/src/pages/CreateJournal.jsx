@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom"
 import { useCookies } from "react-cookie"
 import { useEffect } from "react"
 import { getUserCurrentColor } from "../data/dataFunctions"
+import sadFace from '../assets/emojiSad.png'
+import happyFace from '../assets/emojiHappy.png'
+import madFace from "../assets/emojiMad.png"
+import worryFace from '../assets/emojiWorry.png'
+import embarressedFace from '../assets/emojiEmbarressed.png'
+import stressedFace from '../assets/emojiStressed.png'
 
 export function CreateJournal() {
     const [cookies, setCookie, removeCookie] = useCookies(null)
@@ -104,27 +110,27 @@ export function CreateJournal() {
 
                         <div className="flex flex-wrap gap-y-5 gap-x-16 items-center justify-center sm:gap-x-5">
                                 <div onClick={() => setMood("sad")} className="cursor-pointer flex flex-col items-center gap-2 justify-center h-64 w-72 bg-emojiSad rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
-                                    <img src="../src/assets/emojiSad.png" className="h-28"/>
+                                    <img src={sadFace} className="h-28"/>
                                     <p className="text-lg font-semibold text-emojiSadWord">Sad</p>
                                 </div>
                                 <div onClick={() => setMood("happy")} className="cursor-pointer flex flex-col items-center gap-2  justify-center h-64 w-72 bg-emojiHappy rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
-                                    <img src="../src/assets/emojiHappy.png" className="h-28"/>
+                                    <img src={happyFace} className="h-28"/>
                                     <p className="text-lg font-semibold text-emojiHappyWord">Happy</p>
                                 </div>
                                 <div onClick={() => setMood("angry")} className="cursor-pointer flex flex-col items-center gap-2 justify-center h-64 w-72 bg-emojiAngry rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
-                                    <img src="../src/assets/emojiMad.png" className="h-28"/>
+                                    <img src={madFace} className="h-28"/>
                                     <p className="text-lg font-semibold text-emojiAngryWord">Angry</p>
                                 </div>
                                 <div onClick={() => setMood("worried")} className="cursor-pointer flex flex-col items-center gap-2 justify-center h-64 w-72 bg-emojiWorried rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
-                                    <img src="../src/assets/emojiWorry.png" className="h-28"/>
+                                    <img src={worryFace} className="h-28"/>
                                     <p className="text-lg font-semibold text-emojiWorriedWord">Worried</p>
                                 </div>
                                 <div onClick={() => setMood("embarrassed")} className="cursor-pointer flex flex-col items-center gap-2 justify-center h-64 w-72 bg-emojiEmbarrassed rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
-                                    <img src="../src/assets/emojiEmbarressed.png" className="h-28"/>
+                                    <img src={embarressedFace} className="h-28"/>
                                     <p className="text-lg font-semibold text-emojiEmbarrassedWord">Embarrassed</p>
                                 </div>
                                 <div onClick={() => setMood("stressed")} className="cursor-pointer flex flex-col items-center gap-2  justify-center h-64 w-72 bg-emojiStressed rounded-3xl hover:opacity-75 transition duration-300 ease-in-out">
-                                    <img src="../src/assets/emojiStressed.png" className="h-28"/>
+                                    <img src={stressedFace} className="h-28"/>
                                     <p className="text-lg font-semibold text-emojiStressedWord">Stressed</p>
                                 </div>
 

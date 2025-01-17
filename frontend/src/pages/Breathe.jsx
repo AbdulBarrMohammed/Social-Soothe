@@ -7,7 +7,7 @@ import ReactConfetti from "react-confetti";
 import { LogIn } from "../components/Login";
 import { getUserCurrentColor } from "../data/dataFunctions";
 import { getCurrentSound } from "../data/dataFunctions";
-import breatheInWav from '../assets/breathe-in-wav'
+import breatheInWav from '../assets/breathe-in.wav'
 import exhaleWav from '../assets/exhale.wav'
 
 export function Breathe() {

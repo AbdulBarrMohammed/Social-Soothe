@@ -8,10 +8,14 @@ const flowerRouter = require("./routes/flowerRoutes")
 const soundRouter = require("./routes/soundRouter")
 const colorRouter = require("./routes/colorRouter")
 
+
+
 //app.use(cors())
+/*
 app.use(cors({
     origin: ['http://localhost:8000', "https://social-soothe-frontend.onrender.com"], credentials: true
-}))
+})) */
+
 
 
 
@@ -24,6 +28,8 @@ app.use("/", journalRouter)
 app.use("/", flowerRouter)
 app.use("/", soundRouter)
 app.use("/", colorRouter)
+
+app.use(express.static("dist"))
 
 module.exports = app;
 

@@ -34,7 +34,7 @@ export function Journals() {
     async function onSearch(event) {
         event.preventDefault()
         try {
-            const res = await fetch(`http://localhost:8000/search/${searchQuery}/${userEmail}`)
+            const res = await fetch(`/api/search/${searchQuery}/${userEmail}`)
             const data = await res.json();
             setJournals(data)
         } catch(err) {

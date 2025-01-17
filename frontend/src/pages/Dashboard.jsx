@@ -92,7 +92,7 @@ export function Dashboard() {
             const dataSounds = await resSounds.json();
 
             //Journal data to get journal entry count
-            const res = await fetch(`http://localhost:8000/journals/${email}`)
+            const res = await fetch(`/api/journals/${email}`)
             const journalData = await res.json();
             setJournalCount(journalData.length)
 

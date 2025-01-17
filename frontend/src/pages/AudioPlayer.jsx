@@ -44,11 +44,11 @@ export function AudioPlayer({audioSrc, index, currAudioIndex, setCurrAudioIndex 
      */
     const getData = async () => {
         try {
-            const resCoins = await fetch(`/api/user/${email}`)
+            const resCoins = await fetch(`https://social-soothe.onrender.com/api/user/${email}`)
             const dataCoins = await resCoins.json();
             setCurrCoins(dataCoins.coins)
 
-            const resSounds = await fetch(`/api/sounds/${email}`)
+            const resSounds = await fetch(`https://social-soothe.onrender.com/api/sounds/${email}`)
             const dataSounds = await resSounds.json();
 
             setSounds(dataSounds)

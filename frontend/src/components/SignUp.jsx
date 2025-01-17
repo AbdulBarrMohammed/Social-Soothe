@@ -28,7 +28,6 @@ export function SignUp() {
     //First check if error authenticating user
     if (data.dbError) {
       setError(true)
-      console.log('error authenticating')
     }
     else {
 

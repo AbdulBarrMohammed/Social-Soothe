@@ -52,7 +52,7 @@ export function Dashboard() {
     async function getTreeData() {
 
         try {
-            const res = await fetch(`/api/tree/flowers/${email}`)
+            const res = await fetch(`https://social-soothe.onrender.com/api/tree/flowers/${email}`)
             const data = await res.json();
 
             setFlowerCount(data.length);

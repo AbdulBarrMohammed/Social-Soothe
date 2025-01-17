@@ -28,8 +28,6 @@ export function LogIn() {
     })
 
     if (!response.ok) {
-      console.error(`HTTP Error: ${response.status}`);
-
       return;
     }
 
@@ -38,23 +36,11 @@ export function LogIn() {
       if (response.status === 200) {
         data = await response.json();
       } else {
-        console.error("Error: Response body unavailable");
         return;
       }
     } catch (err) {
-      console.error("Failed to parse JSON:", err);
       return;
     }
-
-    console.log(response.headers.get("Content-Type"));
-
-
-
-    //Get user data
-
-    //const data = await response.json()
-    console.log(data, 'printing data')
-
 
     //Check if the user exists first
     if (data.detail == "User does not exist" || data.detail == "Login failed") {
@@ -62,13 +48,11 @@ export function LogIn() {
       //removeCookie("Email");
       //removeCookie("AuthToken")
 
-
     }
     else {
       //Set user cookies and authtoken
 
       setCookie('Email', data.email)
-      console.log(data.email, 'here os the email <-')
       setCookie('AuthToken', data.token)
       navigate("/dashboard")
     }

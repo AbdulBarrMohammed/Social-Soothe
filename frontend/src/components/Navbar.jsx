@@ -28,10 +28,10 @@ export function Navbar() {
         if (userEmail) {
 
             try {
-                const resColor = await fetch(`/api/user/${userEmail}`)
+                const resColor = await fetch(`https://social-soothe.onrender.com/api/user/${userEmail}`)
                 const dataColor = await resColor.json();
 
-                const resColors = await fetch(`/api/colors/${userEmail}`)
+                const resColors = await fetch(`https://social-soothe.onrender.com/api/colors/${userEmail}`)
 
                 const dataColors = await resColors.json();
 

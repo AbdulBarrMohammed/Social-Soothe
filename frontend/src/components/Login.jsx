@@ -33,15 +33,21 @@ export function LogIn() {
       return;
     }
 
-    console.log(response.headers.get("Content-Type"));
-
     let data;
     try {
-      data = await response.json();
+      if (response.status === 200) {
+        data = await response.json();
+      } else {
+        console.error("Error: Response body unavailable");
+        return;
+      }
     } catch (err) {
       console.error("Failed to parse JSON:", err);
       return;
     }
+
+    console.log(response.headers.get("Content-Type"));
+
 
 
     //Get user data
